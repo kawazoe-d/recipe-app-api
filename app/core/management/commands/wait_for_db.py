@@ -20,7 +20,8 @@ class Command(BaseCommand):
             try:
                 # BaseCommand.check
                 # システム チェック フレームワークを使用して、潜在的な問題がないか Django プロジェクト全体を検査します。
-                # 重大な問題は CommandError として発生します。警告は stderr に出力されます。マイナーな通知は stdout に出力されます。
+                # 重大な問題は CommandError として発生します。
+                # 警告は stderr に出力されます。マイナーな通知は stdout に出力されます。
                 # この場合は、settings.pyのDATABASESで指定されている'default'に接続されているかどうかを確認している
                 self.check(databases=["default"])
                 # 'default'に接続されていたらTrueに変更してループから抜ける
